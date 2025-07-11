@@ -19,6 +19,7 @@
     <div class="page-wrapper">
       <!------- Header / Branding ------->
       <header class="site-header">
+        <img src="img/loreal-logo.png" alt="L’Oréal Logo" class="site-logo" />
         <h1 class="site-title">Smart Product Advisor</h1>
       </header>
 
@@ -36,31 +37,27 @@
               name="userInput"
               type="text"
               placeholder="Ask me about products or routines…"
-              autocomplete="off"
               required
             />
-            <button type="submit" id="sendBtn">
-              <span class="material-icons">send</span>
-              <span class="visually-hidden">Send</span>
-            </button>
+            <button type="submit" class="submit-button">Send</button>
           </form>
         </section>
       </main>
-
-      <!------- Footer Links ------->
-      <footer class="site-footer">
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
-        <nav>
-          <!-- These URLs are placeholders -->
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Contact</a>
-        </nav>
-      </footer>
     </div>
 
-    <!-- secrets.js can be removed when using Cloudflare Workers for API requests -->
-    <script src="secrets.js"></script>
-    <script src="script.js"></script>
+    <!-- Container for latest question -->
+    <div id="latestQuestion" class="latest-question">
+      <!-- Latest question will be displayed here via JS -->
+    </div>
+
+    <!-- Container for previous questions -->
+    <div id="previousQuestions" class="previous-questions">
+      <h3>Past Questions</h3>
+      <ul id="previousQuestionsList">
+        <!-- Previous questions will be displayed here via JS -->
+      </ul>
+    </div>
+
+    <script src="app.js"></script>
   </body>
 </html>

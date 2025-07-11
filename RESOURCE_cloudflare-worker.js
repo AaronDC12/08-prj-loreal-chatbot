@@ -1,6 +1,6 @@
 // Copy this code into your Cloudflare Worker script
 
-export default {
+const worker = {
   async fetch(request, env) {
     const corsHeaders = {
       'Access-Control-Allow-Origin': '*',
@@ -8,6 +8,8 @@ export default {
       'Access-Control-Allow-Headers': 'Content-Type',
       'Content-Type': 'application/json'
     };
+    
+    // Link this script from your index.html file
 
     // Handle CORS preflight requests
     if (request.method === 'OPTIONS') {
